@@ -3,7 +3,6 @@ export type User = {
   name: string;
   profilePicture: string;
   headerPictures: string[];
-  api_key: string;
 };
 
 export type Game = {

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { type User, type Game } from "../types/Profile";
 
-
 const Profile = () => {
   const [user, setUser] = useState<User>();
   const [game, setGame] = useState<Game>();
@@ -21,7 +20,7 @@ const Profile = () => {
   useEffect(() => {
     try {
       fetch(
-        "https://api.thegamesdb.net/v1/Games/ByGameID?apikey="
+        `https://api.thegamesdb.net/v1/Games/ByGameID?apikey=${import.meta.env.VITE_GAMES_DB_API_KEY}`
       )
         .then((res) => res.json())
         .then((data) => setGame(data.game));
@@ -29,7 +28,6 @@ const Profile = () => {
       console.error("Error fetching games", error);
     }
   }, []);
-
 
   return <div>asd</div>;
 };
