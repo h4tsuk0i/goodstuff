@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { type User, type Game } from "../types/Profile";
 
+
 const Profile = () => {
   const [user, setUser] = useState<User>();
   const [game, setGame] = useState<Game>();
@@ -20,7 +21,7 @@ const Profile = () => {
   useEffect(() => {
     try {
       fetch(
-        "https://api.thegamesdb.net/d8e4c3f5090daa662694828af9faa52d708befaa120573f5797c0fbd7c05b929"
+        "https://api.thegamesdb.net/v1/Games/ByGameID?apikey=d8e4c3f5090daa662694828af9faa52d708befaa120573f5797c0fbd7c05b929&id=109035"
       )
         .then((res) => res.json())
         .then((data) => setGame(data.game));
