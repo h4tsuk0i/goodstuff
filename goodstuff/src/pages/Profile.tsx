@@ -9,7 +9,7 @@ const Profile = () => {
   useEffect(() => {
     try {
       fetch(
-        "https://drive.google.com/file/d/107OAR5wKhjyTa1a_k2Z_DoW5y9UM-aIu/view?usp=drive_link"
+        "https://drive.google.com/file/d/1IQ-SfSRF7FaoLzHnsGyPfYN0K-8xz0Um/view?usp=drive_link"
       )
         .then((res) => res.json())
         .then((data) => setUser(data.user));
@@ -21,7 +21,7 @@ const Profile = () => {
   useEffect(() => {
     try {
       fetch(
-        "https://api.thegamesdb.net/v1/Games/ByGameID?apikey=d8e4c3f5090daa662694828af9faa52d708befaa120573f5797c0fbd7c05b929&id=109035"
+        "https://api.thegamesdb.net/v1/Games/ByGameID?apikey="
       )
         .then((res) => res.json())
         .then((data) => setGame(data.game));
@@ -29,6 +29,7 @@ const Profile = () => {
       console.error("Error fetching games", error);
     }
   }, []);
+
 
   return <div>asd</div>;
 };
