@@ -23,4 +23,5 @@ export type Music = {
   id: number;
   name: string;
   image: string;
+  website: string;
 };

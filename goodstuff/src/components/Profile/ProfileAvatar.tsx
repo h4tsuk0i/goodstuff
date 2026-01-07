@@ -1,9 +1,9 @@
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
-import { type user } from "../../types/Profile";
+import { type User } from "../../types/Profile";
 
 type ProfileAvatarProps = {
-  user: user;
+  user: User;
 };
 
 export function ProfileAvatar({ user }: ProfileAvatarProps) {
